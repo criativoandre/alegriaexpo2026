@@ -1,62 +1,63 @@
 import { Link } from 'react-router-dom'
-import logo from '@/assets/logo.svg'
+import logo from '@/assets/logo-alegria.png'
 
 export function SiteFooter() {
   return (
     <footer className="bg-[#070708] text-white border-t border-white/10">
-      <div className="container-edge py-20 grid gap-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+      <div className="container-edge py-20 grid gap-14 md:grid-cols-[1.5fr_1fr_1.2fr]">
+
+        {/* Logo + descrição */}
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo} alt="" className="h-12 w-12 object-contain" />
-            <div className="leading-none">
-              <div className="font-display italic text-3xl text-[#f3e9d6]">Alegria</div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/55 mt-2">
-                Expo Brutos · Limeira · SP
-              </div>
-            </div>
+            <img
+              src={logo}
+              alt="Alegria Expo Brutos"
+              className="h-20 md:h-18 w-auto object-contain"
+            />
           </div>
+
           <p className="mt-8 max-w-sm text-white/65 leading-relaxed">
             A maior feira de semijoias em bruto da América Latina, no coração da tradicional Rua
             da Alegria.
           </p>
         </div>
 
+        {/* Navegação */}
         <FooterCol
-          title="Navegar"
+          title="Navegação"
           links={[
             { to: '/', label: 'Home' },
-            { to: '/rua-da-alegria', label: 'Rua da Alegria' },
             { to: '/expositores', label: 'Expositores' },
             { to: '/patrocinadores', label: 'Patrocinadores' },
+            { to: '/rua-da-alegria', label: 'Rua da Alegria' },
           ]}
         />
 
-        <FooterCol
-          title="Edição 2026"
-          links={[
-            { to: '/', label: '26, 27 e 28 de Maio' },
-            { to: '/rua-da-alegria', label: 'Como chegar' },
-            { to: '/expositores', label: 'Lista de expositores' },
-            { to: '/a-pagina-modelo', label: 'Página modelo' },
-          ]}
-        />
-
+        {/* Redes */}
         <div>
           <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/45 mb-5">
-            Contato
+            Nossas Redes
           </div>
-          <a
-            href="https://wa.me/5519992260693"
-            className="block font-display italic text-3xl text-[#fb00e4] hover:opacity-80 transition-opacity"
-          >
-            (19) 99226.0693
-          </a>
-          <a
-            href="#"
-            className="mt-4 inline-block font-mono text-[11px] uppercase tracking-[0.28em] text-white/70 border-b border-white/30 pb-1 hover:text-white hover:border-white transition-colors"
-          >
-            Instagram
-          </a>
+
+          <div className="flex flex-col items-start gap-3">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/70 border-b border-white/30 pb-1 hover:text-[#FF00E7] hover:border-[#FF00E7] transition-colors"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/70 border-b border-white/30 pb-1 hover:text-[#FF00E7] hover:border-[#FF00E7] transition-colors"
+            >
+              Facebook
+            </a>
+          </div>
         </div>
       </div>
 
@@ -76,6 +77,7 @@ function FooterCol({ title, links }: { title: string; links: { to: string; label
       <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/45 mb-5">
         {title}
       </div>
+
       <ul className="space-y-3">
         {links.map((l) => (
           <li key={l.label}>
