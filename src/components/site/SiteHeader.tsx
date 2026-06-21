@@ -1,13 +1,11 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import logo from '@/assets/logo.svg'
+import logo from '@/assets/logo-alegria.png'
 
 const nav = [
-  { to: '/', label: 'Home' },
-  { to: '/rua-da-alegria', label: 'Rua da Alegria' },
+  { to: '/', label: '' },
   { to: '/expositores', label: 'Expositores' },
   { to: '/patrocinadores', label: 'Patrocinadores' },
-  { to: '/a-pagina-modelo', label: 'Página Modelo' },
 ] as const
 
 export function SiteHeader() {
@@ -16,15 +14,11 @@ export function SiteHeader() {
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="container-edge flex items-center justify-between py-6">
         <Link to="/" className="flex items-center gap-3" aria-label="Alegria Expo Brutos">
-          <img src={logo} alt="" className="h-10 w-10 object-contain" />
-          <span className="hidden sm:block leading-none">
-            <span className="block font-display italic text-2xl tracking-wide text-[#f3e9d6]">
-              Alegria
-            </span>
-            <span className="block font-mono text-[9px] uppercase tracking-[0.32em] text-white/55 mt-1">
-              Expo Brutos · Limeira
-            </span>
-          </span>
+          <img
+            src={logo}
+            alt="Alegria Expo Brutos"
+            className="h-20 md:h-18 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -42,8 +36,10 @@ export function SiteHeader() {
               {n.label}
             </NavLink>
           ))}
-          <Link to="/expositores" className="btn-elegant !py-2.5 !px-5 !text-sm">
-            Fale conosco
+          <Link
+            to="/rua-da-alegria"
+            className="btn-elegant !py-2.5 !px-5 !text-sm !bg-[#FF00E7] !text-[#ffffff] hover:!bg-[#0100F4] hover:!text-[#ffffff]">
+            Rua da Alegria
           </Link>
         </nav>
 
