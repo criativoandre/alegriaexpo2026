@@ -2,18 +2,19 @@ import { Link } from 'react-router-dom'
 import { usePageMeta } from '@/hooks/usePageMeta'
 
 const expositores = [
-  { name: 'A&B Brutos', category: 'Brincos · Pulseiras', booth: '01' },
-  { name: 'Atelier Limeira', category: 'Colares · Tornozeleiras', booth: '02' },
-  { name: 'Bragoto Joias', category: 'Brutos · Linha completa', booth: '03' },
-  { name: 'Dermond Acessórios', category: 'Brincos em tubos', booth: '04' },
-  { name: 'Marcone & Cia', category: 'Brutos cravejados', booth: '05' },
-  { name: 'Battiston Bijoux', category: 'Pulseiras · Anéis', booth: '06' },
-  { name: 'Pizzoli Premium', category: 'Colares folheados', booth: '07' },
-  { name: 'Beatriz Brutos', category: 'Linha básica', booth: '08' },
-  { name: 'Roma Acessórios', category: 'Tornozeleiras', booth: '09' },
-  { name: 'Guilherme Bijoux', category: 'Brutos especiais', booth: '10' },
-  { name: 'Alegria Joias', category: 'Linha premium', booth: '11' },
-  { name: 'Limeira Brutos', category: 'Mix completo', booth: '12' },
+  { name: 'A&B Brutos', category: 'Brincos · Pulseiras', booth: '01', slug: 'ab-brutos' },
+  { name: 'Atelier Limeira', category: 'Colares · Tornozeleiras', booth: '02', slug: 'atelier-limeira' },
+  { name: 'Bragoto Joias', category: 'Brutos · Linha completa', booth: '03', slug: 'bragoto-joias' },
+  { name: 'Dermond Acessórios', category: 'Brincos em tubos', booth: '04', slug: 'dermond-acessorios' },
+  { name: 'Marcone & Cia', category: 'Brutos cravejados', booth: '05', slug: 'marcone-e-cia' },
+  { name: 'Battiston Bijoux', category: 'Pulseiras · Anéis', booth: '06', slug: 'battiston-bijoux' },
+  { name: 'Pizzoli Premium', category: 'Colares folheados', booth: '07', slug: 'pizzoli-premium' },
+  { name: 'Beatriz Brutos', category: 'Linha básica', booth: '08', slug: 'beatriz-brutos' },
+  { name: 'Roma Acessórios', category: 'Tornozeleiras', booth: '09', slug: 'roma-acessorios' },
+  { name: 'Guilherme Bijoux', category: 'Brutos especiais', booth: '10', slug: 'guilherme-bijoux' },
+  { name: 'Alegria Joias', category: 'Linha premium', booth: '11', slug: 'alegria-joias' },
+  { name: 'Limeira Brutos', category: 'Mix completo', booth: '12', slug: 'limeira-brutos' },
+  { name: 'André Brutos', category: 'Mix completo', booth: '13', slug: 'andre-brutos' },
 ]
 
 export default function Expositores() {
@@ -57,29 +58,42 @@ export default function Expositores() {
 
           <div className="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3 border border-white/10">
             {expositores.map((e) => (
-              <article
+              <Link
                 key={e.booth}
-                className="group relative p-8 md:p-10 bg-[#070708] hover:bg-[#0e0e16] transition-colors min-h-[280px] flex flex-col justify-between"
+                to={`/expositores/${e.slug}`}
+                className="group relative block bg-[#070708] hover:bg-[#0e0e16] transition-colors min-h-[240px] p-6 md:p-8"
               >
-                <div className="flex items-start justify-between">
-                  <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/50">
-                    Estande {e.booth}
+                <div className="flex flex-col h-full justify-between">
+
+                  {/* Topo: frame + nome */}
+                  <div className="grid grid-cols-[110px_1fr] md:grid-cols-[130px_1fr] gap-6 items-center">
+
+                    {/* Frame 1:1 */}
+                    <div className="aspect-square w-full border border-white/15 bg-white/5 flex items-center justify-center overflow-hidden">
+                      <span className="font-display text-4xl text-[#fb00e4]">
+                        {e.name.charAt(0)}
+                      </span>
+                    </div>
+
+                    {/* Nome da empresa alinhado ao frame */}
+                    <h3 className="font-display text-3xl md:text-4xl text-[#f3e9d6] leading-tight">
+                      {e.name}
+                    </h3>
                   </div>
-                  <span className="h-2 w-2 bg-[#fb00e4] rounded-full" />
+
+                  {/* Parte inferior centralizada */}
+                  <div className="mt-8 text-center">
+                    <div className="text-sm text-white/65">
+                      {e.category}
+                    </div>
+
+                    <div className="mt-5 inline-block font-mono text-[11px] uppercase tracking-[0.28em] text-white/70 border-b border-white/30 pb-1 group-hover:text-[#fb00e4] group-hover:border-[#fb00e4] transition-colors">
+                      Ver perfil →
+                    </div>
+                  </div>
+
                 </div>
-                <div>
-                  <h3 className="font-display text-4xl md:text-5xl text-[#f3e9d6] leading-tight">
-                    {e.name}
-                  </h3>
-                  <div className="mt-3 text-sm text-white/65">{e.category}</div>
-                  <Link
-                    to="/a-pagina-modelo"
-                    className="mt-6 inline-block font-mono text-[11px] uppercase tracking-[0.28em] text-white/70 border-b border-white/30 pb-1 group-hover:text-[#fb00e4] group-hover:border-[#fb00e4] transition-colors"
-                  >
-                    Ver perfil →
-                  </Link>
-                </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -91,7 +105,7 @@ export default function Expositores() {
             Quer expor na <span className="display-italic">próxima edição?</span>
           </h2>
           <div className="md:justify-self-end">
-            <Link to="/" className="btn-elegant is-light">
+            <Link to="/" className="btn-elegant mt-10 !bg-[#ffffff] !text-[#000000] hover:!bg-[#0100F4] hover:!text-[#ffffff]">
               Falar com a organização →
             </Link>
           </div>
