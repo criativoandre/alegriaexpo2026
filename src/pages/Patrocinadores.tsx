@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { usePageMeta } from '@/hooks/usePageMeta'
 
 const patrocinadores = [
-  { name: 'Patrocinador Diamante 01', category: 'Diamante', booth: '01', slug: 'patrocinador-diamante-01', logo: '/patrocinadores/patrocinador-diamante-01.png' },
+  { name: 'Patrocinador Diamante 01', category: 'Diamante', booth: '01', slug: 'patrocinador-diamante-01', logo: '/patrocinadores/1.jpg' },
   { name: 'Patrocinador Diamante 02', category: 'Diamante', booth: '02', slug: 'patrocinador-diamante-02', logo: '/patrocinadores/patrocinador-diamante-02.png' },
   { name: 'Patrocinador Ouro 01', category: 'Ouro', booth: '03', slug: 'patrocinador-ouro-01', logo: '/patrocinadores/patrocinador-ouro-01.png' },
   { name: 'Patrocinador Ouro 02', category: 'Ouro', booth: '04', slug: 'patrocinador-ouro-02', logo: '/patrocinadores/patrocinador-ouro-02.png' },
@@ -72,49 +72,50 @@ export default function Patrocinadores() {
           </div>
 
           <div className="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3 border border-white/10">
-  {patrocinadores.map((p) => (
-    <Link
-      key={p.booth}
-      to={`/patrocinadores/${p.slug}`}
-      className="group relative block bg-[#070708] hover:bg-[#0e0e16] transition-colors min-h-[240px] p-6 md:p-8"
-    >
-      <div className="flex flex-col h-full justify-between">
-
-        {/* Topo: logo + nome */}
-        <div className="grid grid-cols-[90px_1fr] md:grid-cols-[100px_1fr] gap-5 items-center">
-
-          {/* Frame 1:1 com logo */}
-          <div className="aspect-square w-full border border-white/15 bg-white/5 flex items-center justify-center overflow-hidden p-4">
-            <img
-              src={p.logo}
-              alt={`Logo ${p.name}`}
-              className="w-full h-full object-contain"
-              loading="lazy"
-            />
-          </div>
-
-          {/* Nome alinhado ao frame */}
-          <h3 className="font-display text-2xl md:text-3xl text-[#f3e9d6] leading-tight">
-            {p.name}
-          </h3>
-        </div>
-
-        {/* Parte inferior centralizada */}
-        <div className="mt-8 text-center">
-          <div className="text-sm text-white/65">
-            {p.category}
-          </div>
-
-          <div className="mt-5 inline-block font-mono text-[11px] uppercase tracking-[0.28em] text-white/70 border-b border-white/30 pb-1 group-hover:text-[#fb00e4] group-hover:border-[#fb00e4] transition-colors">
-            Ver perfil →
-          </div>
-        </div>
-      </div>
-    </Link>
-  ))}
-</div>
-        </div>
-      </section>
+                      {patrocinadores.map((e) => (
+                        <Link
+                          key={e.booth}
+                          to={`/patrocinadores/${e.slug}`}
+                          className="group relative block bg-[#070708] hover:bg-[#0e0e16] transition-colors min-h-[240px] p-6 md:p-8"
+                        >
+                          <div className="flex flex-col h-full justify-between">
+          
+                            {/* Topo: frame + nome */}
+                            <div className="grid grid-cols-[110px_1fr] md:grid-cols-[130px_1fr] gap-6 items-center">
+          
+                              {/* Frame 1:1 */}
+                              <div className="aspect-square w-full border border-white/15 bg-white/5 flex items-center justify-center overflow-hidden">
+                                <img
+                                  src={e.logo}
+                                  alt={`Logo ${e.name}`}
+                                  className="w-full h-full object-contain"
+                                  loading="lazy"
+                                />
+                              </div>
+          
+                              {/* Nome da empresa alinhado ao frame */}
+                              <h3 className="font-display text-3xl md:text-4xl text-[#f3e9d6] leading-tight">
+                                {e.name}
+                              </h3>
+                            </div>
+          
+                            {/* Parte inferior centralizada */}
+                            <div className="mt-8 text-center">
+                              <div className="text-sm text-white/65">
+                                {e.category}
+                              </div>
+          
+                              <div className="mt-5 inline-block font-mono text-[11px] uppercase tracking-[0.28em] text-white/70 border-b border-white/30 pb-1 group-hover:text-[#fb00e4] group-hover:border-[#fb00e4] transition-colors">
+                                Ver perfil →
+                              </div>
+                            </div>
+          
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </section>
 
       <section className="panel-magenta text-white">
         <div className="container-edge py-24 md:py-32 grid md:grid-cols-2 gap-10 items-center">

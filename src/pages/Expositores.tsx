@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { usePageMeta } from '@/hooks/usePageMeta'
 
 const expositores = [
-  { name: 'A&B Brutos', category: 'Brincos · Pulseiras', booth: '01', slug: 'ab-brutos', logo: '/expositores/ab-brutos.png' },
+  { name: 'A&B Brutos', category: 'Brincos · Pulseiras', booth: '01', slug: 'ab-brutos', logo: '/expositores/24.jpg' },
   { name: 'Atelier Limeira', category: 'Colares · Tornozeleiras', booth: '02', slug: 'atelier-limeira', logo: '/expositores/atelier-limeira.png' },
   { name: 'Bragoto Joias', category: 'Brutos · Linha completa', booth: '03', slug: 'bragoto-joias', logo: '/expositores/bragoto-joias.png' },
   { name: 'Dermond Acessórios', category: 'Brincos em tubos', booth: '04', slug: 'dermond-acessorios', logo: '/expositores/dermond-acessorios.png' },
