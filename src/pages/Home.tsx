@@ -132,7 +132,7 @@ export default function Home() {
           'Semijoias em bruto',
           'Direto da fonte',
           'Limeira · SP',
-          'Edição 2026',
+          '7ª Edição',
         ]}
       />
 
