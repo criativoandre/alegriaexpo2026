@@ -19,111 +19,112 @@ export default function Home() {
 
   return (
     <>
-{/* HERO — split screen with center frame */}
-<section className="relative bg-[#070708] text-white overflow-hidden">
-  <div className="grid md:grid-cols-2 min-h-[100vh]">
+      {/* HERO — split screen with center frame */}
+      <section className="relative bg-[#070708] text-white overflow-hidden">
+        <div className="grid md:grid-cols-2 min-h-[100vh]">
 
-    {/* LEFT */}
-    <div className="relative panel-electric overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
+          {/* LEFT */}
+          <div className="relative panel-electric overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
 
-      <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-14 md:pr-[24vw] py-24 md:py-32">
-        <div className="tag-soft text-[#f3e9d6]">
-          Alegria · 7ª Edição
-        </div>
-
-        <h1 className="mt-8 font-display text-[14vw] md:text-[6.5rem] xl:text-[7.5rem] leading-[0.9] text-[#f3e9d6]">
-          Abrace o brilho
-          <br />
-          <span className="display-italic">do que é</span>
-          <br />
-          único.
-        </h1>
-      </div>
-    </div>
-
-    {/* CENTER FRAME — MOBILE */}
-    <div className="md:hidden bg-[#070708] px-6 py-10">
-      <div className="relative mx-auto w-full max-w-[340px] aspect-[3/4] panel-magenta shadow-2xl overflow-hidden">
-        <img
-          src={heroFrameImage}
-          alt="Feira de semijoias Rua da Alegria"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-
-        <div className="absolute inset-0 bg-black/35" />
-
-        <div className="absolute inset-5 border border-white/35 pointer-events-none" />
-
-        <div className="relative z-10 h-full w-full flex flex-col justify-end p-8">
-          <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/70">
-            26 · 27 · 28 Maio
-          </div>
-
-          <div className="mt-3 font-display italic text-3xl text-white">
-            Rua da Alegria
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* RIGHT */}
-    <div className="relative panel-noir flex items-center">
-      <div className="relative z-10 px-6 md:px-14 md:pl-[24vw] py-24 md:py-32 w-full">
-        <div className="font-display italic text-4xl md:text-6xl text-[#f3e9d6] leading-tight">
-          Edição 2026
-        </div>
-
-        <p className="mt-8 max-w-md text-white/75 leading-relaxed text-lg">
-          A maior feira de semijoias em <strong>bruto</strong> da América Latina.
-          Três dias direto com quem fabrica, no coração da Rua da Alegria, em Limeira.
-        </p>
-
-        <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-8">
-          {[
-            { k: '+50', v: 'Marcas' },
-            { k: '03', v: 'Dias' },
-            { k: '7ª', v: 'Edição' },
-          ].map((s) => (
-            <div key={s.v}>
-              <div className="font-display text-5xl md:text-6xl text-[#f3e9d6]">
-                {s.k}
+              <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-14 md:pr-[24vw] pt-36 pb-14 md:py-32">
+              <div className="tag-soft text-[#f3e9d6]">
+                Alegria · 7ª Edição
               </div>
-              <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.32em] text-white/55">
-                {s.v}
+
+              <h1 className="mt-8 font-display text-[14vw] md:text-[6.5rem] xl:text-[7.5rem] leading-[0.9] text-[#f3e9d6]">
+                Abrace o brilho
+                <br />
+                <span className="display-italic">do que é</span>
+                <br />
+                único.
+              </h1>
+            </div>
+          </div>
+
+          {/* CENTER FRAME — MOBILE */}
+          <div className="md:hidden bg-[#070708] px-6 py-10">
+            <div className="relative mx-auto w-full max-w-[340px] aspect-[3/4] panel-magenta shadow-2xl overflow-hidden">
+              <img
+                src={heroFrameImage}
+                alt="Feira de semijoias Rua da Alegria"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-black/35" />
+
+              <div className="absolute inset-5 border border-white/35 pointer-events-none" />
+
+              <div className="relative z-10 h-full w-full flex flex-col justify-end p-8">
+                <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/70">
+                  26 · 27 · 28 Maio
+                </div>
+
+                <div className="mt-3 font-display italic text-3xl text-white">
+                  Rua da Alegria
+                </div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* RIGHT */}
+          <div className="relative panel-noir flex items-center">
+              <div className="relative z-10 px-6 md:px-14 md:pl-[24vw] pt-10 pb-20 md:py-32 w-full">
+              <div className="font-display italic text-4xl md:text-6xl text-[#f3e9d6] leading-tight">
+                Edição 2026
+              </div>
+
+              <p className="mt-8 max-w-md text-white/75 leading-relaxed text-lg">
+                A maior feira de semijoias em <strong>bruto</strong> da América Latina.
+                Três dias direto com quem fabrica, no coração da Rua da Alegria, em Limeira.
+              </p>
+
+              <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-8">
+                {[
+                  { k: '+50', v: 'Marcas' },
+                  { k: '03', v: 'Dias' },
+                  { k: '7ª', v: 'Edição' },
+                ].map((s) => (
+                  <div key={s.v}>
+                    <div className="font-display text-5xl md:text-6xl text-[#f3e9d6]">
+                      {s.k}
+                    </div>
+                    <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.32em] text-white/55">
+                      {s.v}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  {/* CENTER FRAME — DESKTOP */}
-  <div className="hidden md:block absolute left-1/2 top-1/2 z-20 w-[30vw] max-w-[460px] min-w-[340px] aspect-[3/4] -translate-x-1/2 -translate-y-1/2">
-    <div className="relative h-full w-full panel-magenta shadow-2xl overflow-hidden">
-      <img
-        src={heroFrameImage}
-        alt="Feira de semijoias Rua da Alegria"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+        {/* CENTER FRAME — DESKTOP */}
+        <div className="hidden md:block absolute left-1/2 top-1/2 z-20 w-[30vw] max-w-[460px] min-w-[340px] aspect-[3/4] -translate-x-1/2 -translate-y-1/2">
+          <div className="relative h-full w-full panel-magenta shadow-2xl overflow-hidden">
+            <img
+              src={heroFrameImage}
+              alt="Feira de semijoias Rua da Alegria"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
 
-      <div className="absolute inset-0 bg-black/35" />
+            <div className="absolute inset-0 bg-black/35" />
 
-      <div className="absolute inset-6 border border-white/35 pointer-events-none" />
+            <div className="absolute inset-6 border border-white/35 pointer-events-none" />
 
-      <div className="relative z-10 h-full w-full flex flex-col justify-end p-10">
-        <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/70">
-          26 · 27 · 28 Maio
+            <div className="relative z-10 h-full w-full flex flex-col justify-end p-10">
+              <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/70">
+                26 · 27 · 28 Maio
+              </div>
+
+              <div className="mt-3 font-display italic text-4xl text-white">
+                Rua da Alegria
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="mt-3 font-display italic text-4xl text-white">
-          Rua da Alegria
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
       <Marquee
         variant="black"
         items={[
