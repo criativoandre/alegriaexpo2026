@@ -3,7 +3,7 @@ import { useState } from 'react'
 import logo from '@/assets/logo-alegria.webp'
 
 const nav = [
-  { to: '/', label: 'Home' },
+  { to: '/', label: '' },
   { to: '/expositores', label: 'Expositores' },
   { to: '/patrocinadores', label: 'Patrocinadores' },
 ] as const
