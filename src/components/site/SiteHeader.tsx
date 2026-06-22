@@ -12,12 +12,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false)
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
-      <div className="container-edge flex items-center justify-between py-6">
+      <div className="container-edge flex items-center justify-between py-5 md:py-6">
         <Link to="/" className="flex items-center gap-3" aria-label="Alegria Expo Brutos">
           <img
             src={logo}
             alt="Alegria Expo Brutos"
-            className="h-20 md:h-18 w-auto object-contain"
+            className="h-12 md:h-20 w-auto object-contain"
           />
         </Link>
 
@@ -36,9 +36,11 @@ export function SiteHeader() {
               {n.label}
             </NavLink>
           ))}
+
           <Link
             to="/rua-da-alegria"
-            className="btn-elegant !py-2.5 !px-5 !text-sm !bg-[#FF00E7] !text-[#ffffff] hover:!bg-[#0100F4] hover:!text-[#ffffff]">
+            className="btn-elegant !py-2.5 !px-5 !text-sm !bg-[#FF00E7] !text-[#ffffff] hover:!bg-[#0100F4] hover:!text-[#ffffff]"
+          >
             Rua da Alegria
           </Link>
         </nav>
@@ -51,23 +53,6 @@ export function SiteHeader() {
           {open ? 'Fechar' : 'Menu'}
         </button>
       </div>
-
-      {open && (
-        <div className="lg:hidden bg-[#070708] border-t border-white/10">
-          <div className="container-edge flex flex-col py-4">
-            {nav.map((n) => (
-              <Link
-                key={n.to}
-                to={n.to}
-                onClick={() => setOpen(false)}
-                className="border-b border-white/10 py-4 font-display italic text-3xl text-[#f3e9d6]"
-              >
-                {n.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </header>
   )
 }
