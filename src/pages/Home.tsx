@@ -43,8 +43,8 @@ export default function Home() {
           </div>
 
           {/* CENTER FRAME — MOBILE */}
-          <div className="md:hidden bg-[#070708] px-6 py-10">
-            <div className="relative mx-auto w-full max-w-[340px] aspect-[3/4] panel-magenta shadow-2xl overflow-hidden">
+          <div className="md:hidden relative z-10 px-6 -mt-6 -mb-6">
+            <div className="relative mx-auto w-full max-w-[340px] aspect-[3/4] shadow-2xl overflow-hidden">
               <img
                 src={heroFrameImage}
                 alt="Feira de semijoias Rua da Alegria"
