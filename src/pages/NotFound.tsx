@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { usePageMeta } from '@/hooks/usePageMeta'
-import notFoundImage from '@/assets/not-found.png'
+import notFoundImage from '@/assets/not-found.webp'
 
 export default function NotFound() {
   usePageMeta({
