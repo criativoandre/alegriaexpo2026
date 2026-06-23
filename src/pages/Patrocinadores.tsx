@@ -7,7 +7,7 @@ const patrocinadores = [
   { name: 'ACP Galvânica', category: 'Galvânica', booth: '03', slug: 'acp-galvanica', logo: '/patrocinadores/acp-galvanica.webp' },
   { name: 'Bosco Galvânica', category: 'Galvânica', booth: '04', slug: 'bosco-galvanica', logo: '/patrocinadores/bosco-galvanica.webp' },
   { name: 'JMD Galvânica', category: 'Galvânica', booth: '05', slug: 'jmd-galvanica', logo: '/patrocinadores/jmd-galvanica.webp' },
-  { name: 'FC Joias', category: 'Joias', booth: '06', slug: 'fc-joias', logo: '/patrocinadores/fc-joias.webp' },
+  { name: 'FC Joias Galvânica', category: 'Joias', booth: '06', slug: 'fc-joias', logo: '/patrocinadores/fc-joias-galvanica.webp' },
   { name: 'Franco Galvânica', category: 'Galvânica', booth: '07', slug: 'franco-galvanica', logo: '/patrocinadores/franco-galvanica.webp' },
   { name: 'GPS Galvânica', category: 'Galvânica', booth: '08', slug: 'gps-galvanica', logo: '/patrocinadores/gps-galvanica.webp' },
   { name: 'La Mare Folheados', category: 'Folheados', booth: '09', slug: 'la-mare-folheados', logo: '/patrocinadores/la-mare-folheados.webp' },
