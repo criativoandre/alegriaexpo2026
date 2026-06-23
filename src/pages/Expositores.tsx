@@ -63,6 +63,10 @@ export default function Expositores() {
     ogDescription: 'Fabricantes de semijoias em bruto reunidos por três dias na Rua da Alegria.',
   })
 
+  const expositoresOrdenados = [...expositores].sort((a, b) =>
+  a.name.localeCompare(b.name, 'pt-BR')
+)
+
   return (
     <>
       <section className="relative panel-noir text-white pt-40 pb-24 md:pt-48 md:pb-32 border-b border-white/10">
@@ -94,9 +98,9 @@ export default function Expositores() {
           </div>
 
           <div className="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3 border border-white/10">
-            {expositores.map((e) => (
+            {expositoresOrdenados.map((e) => (
               <Link
-                key={e.booth}
+                key={e.slug}
                 to={`/expositores/${e.slug}`}
                 className="group relative block bg-[#070708] hover:bg-[#0e0e16] transition-colors min-h-[240px] p-6 md:p-8"
               >
